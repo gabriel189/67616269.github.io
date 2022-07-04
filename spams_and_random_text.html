@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>duck-complex</title>
+        <style>
+            h1 { text-align: center;
+                 font-size: 3em;
+                 padding: 0px;
+                 margin: 0px;}
+            span {
+                 border-bottom: solid 3px;
+                 }
+            p    { text-align: center;
+                   font-size: 1.3em;
+                   color: grey;
+                   padding: 20px;}
+            h3   {border-bottom: solid 5px;
+                  font-size: 1em;
+                  text-align: center;
+                  color: darkgrey;
+                  padding: 0px;
+                  margin: 0px;}
+            img  {display: inline;
+                  width: 20%;
+                  margin: 10px;
+                  }
+            #randoms{display: inline;
+                     color: darkgray;
+                     font-size: 0.9em;}
+            button {display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;}
+            .thumbnail {
+                border-radius: 5px;
+                cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+    }       
+            .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+            .modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+    //max-width: 75%;
+}
+            #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+            
+           
+        </style>
+    </head>
+    <body>
+        <a href="index.html"><h1>duck-complex blog</h1></a>
+        <h3>a place for me to release my creativity or vent</h3>
+        
+        <img class="thumbnail" src="images/invanscica/ivanscica%20(1).jpg" alt="ovo je slika automata z kondomima u wcu">
+        <img class="thumbnail" src="images/invanscica/ivanscica%20(2).jpg" alt="slika2">
+        <div id="myModal" class="modal">
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        
+        <img src="images/invanscica/ivanscica%20(3).jpg" alt="slika3">
+        <img src="images/invanscica/ivanscica%20(4).jpg" alt="slika4">
+        <img src="images/invanscica/ivanscica%20(5).jpg" alt="slika5">
+        <img src="images/invanscica/ivanscica%20(6).jpg" alt="slika6">
+        <div id="slike1" style="display: none">
+            <img src="images/invanscica/ivanscica%20(1).jpg" alt="slika1">
+            <img src="images/invanscica/ivanscica%20(2).jpg" alt="slika2">
+            <img src="images/invanscica/ivanscica%20(3).jpg" alt="slika3">
+            <img src="images/invanscica/ivanscica%20(4).jpg" alt="slika4">
+            <img src="images/invanscica/ivanscica%20(5).jpg" alt="slika5">
+            <img src="images/invanscica/ivanscica%20(6).jpg" alt="slika6">
+        </div>
+        <div id="slike2" style="display: none">
+            <img src="images/invanscica/ivanscica%20(1).jpg" alt="slika1">
+            <img src="images/invanscica/ivanscica%20(2).jpg" alt="slika2">
+            <img src="images/invanscica/ivanscica%20(3).jpg" alt="slika3">
+            <img src="images/invanscica/ivanscica%20(4).jpg" alt="slika4">
+            <img src="images/invanscica/ivanscica%20(5).jpg" alt="slika5">
+            <img src="images/invanscica/ivanscica%20(6).jpg" alt="slika6">
+        </div>
+        <div id="slike3" style="display: none">
+            <img src="images/invanscica/ivanscica%20(1).jpg" alt="slika1">
+            <img src="images/invanscica/ivanscica%20(2).jpg" alt="slika2">
+            <img src="images/invanscica/ivanscica%20(3).jpg" alt="slika3">
+            <img src="images/invanscica/ivanscica%20(4).jpg" alt="slika4">
+            <img src="images/invanscica/ivanscica%20(5).jpg" alt="slika5">
+            <img src="images/invanscica/ivanscica%20(6).jpg" alt="slika6">
+        </div>
+        <div id="slike4" style="display: none">
+            <img src="images/invanscica/ivanscica%20(1).jpg" alt="slika1">
+            <img src="images/invanscica/ivanscica%20(2).jpg" alt="slika2">
+            <img src="images/invanscica/ivanscica%20(3).jpg" alt="slika3">
+            <img src="images/invanscica/ivanscica%20(4).jpg" alt="slika4">
+            <img src="images/invanscica/ivanscica%20(5).jpg" alt="slika5">
+            <img src="images/invanscica/ivanscica%20(6).jpg" alt="slika6">
+        </div>
+        <button type="button" onclick="loadMore()">load more</button>
+        
+        <script>
+            let counter=0;
+        function loadMore(){
+            counter += 1;
+            document.getElementById("slike"+counter).style.display="inline";
+        }
+            
+                
+    const modal = document.getElementById('myModal');
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+var img = document.querySelectorAll('.thumbnail');
+    
+for (var i=0; i<img.length; i++){
+    
+    img[i].onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+     
+}
+// When the user clicks on <span> (x), close the modal
+modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+    
+ }       
+        
+
+        </script>
+        
+    </body>    
+ 
+</html>

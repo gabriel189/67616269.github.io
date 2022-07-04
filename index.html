@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title>6475636B2D636F6D706C6578</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <style>
+            h1 { text-align: center;
+                 font-size: 3em;
+                 padding: 0px;
+                 margin: 0px;}
+            span:hover {
+                 border-bottom: solid 3px;
+                 padding: 20px;
+                 
+          
+                 }
+            p    { text-align: center;
+                   font-size: 1.3em;
+                   color:grey;
+                   margin-top: 0px;
+                   margin-bottom: 30px;}
+            h3   {border-bottom: solid 5px;
+                  font-size: 1em;
+                  text-align: center;
+                  color: darkgrey;
+                  padding: 0px;
+                  margin: 0px;}
+            img  {display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 20%;}
+            #randoms{display: block;
+                     color: white;
+                    background-color: black;
+                     font-size: 0.9em;}
+            #ideas{color:bisque;}
+            #shitwebsite {background-color: black;
+                          color: white;}
+            button{ display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 10%;
+                    background-color: burlywood;
+                    color: forestgreen;
+            }
+            .datum {margin-bottom: 0px;
+                    padding-bottom: 0px;
+                    /* color: lightgrey;*/
+                    font-size: 0.9em; 
+                   
+                    text-shadow: 0 0 8px #000;
+            }
+            .footer {position: fixed;
+                     left: 0;
+                     bottom: 0;
+                     width: 100%;
+                     text-align: center;}
+            .header {position: fixed;
+                     left: 0;
+                     top: 0;
+                     width: 100%;
+                     text-align: center;}
+            .posts  {margin-top: 150px;
+                     margin-bottom: 50px;}
+        </style>
+    </head>
+    <body>
+       <div class="header">
+        <h1>duck-complex blog</h1>
+        <h3>a place for me to release my creativity or vent</h3>
+        <h3 id="shitwebsite">this website looks like shit on phones</h3>
+       </div>
+       <div class="posts">
+       
+        <p class="datum">25.4.2022.</p>   
+        <a href="posts/halfMaraton.html"><p><span>half marathon</span></p></a>   
+        <p class="datum">18.4.2022.</p>
+        <a href="posts/fun_times.html"><p><span>fun times </span></p></a>
+        <p class="datum">14.4.2022.</p>
+        <a href="posts/future_plans_for_this_website.html"><p><span>future plans for this website</span></p></a>
+        <p class="datum">14.4.2022.</p>
+        <a href="posts/water_bottle_stop_motion.html"><p><span>water bottle stop motion test</span></p></a>
+        <p class="datum">11.4.2022.</p>
+        <a href="posts/frankenstein_earphones.html"><p><span>frankenstein earphones (wireless) </span></p></a>
+        <p class="datum">8.4.2022.</p>
+        <a href="posts/music_for_my_car.html"><p><span>car music</span></p></a>
+        <p class="datum">8.4.2022.</p>
+        <a href="posts/favorite_food_list.html"><p><span>favorite food list</span></p></a>
+        <p class="datum">7.4.2022.</p>
+        <a href="posts/scott_pilgrim.html"><p><span>scott pilgrim </span></p></a>
+        <p class="datum">6.4.2022.</p>
+        <a href="posts/cry.html"><p><span>cry </span></p></a>
+        <p class="datum">22.1.2022.</p>
+        <a href="posts/noodle_video.html"><p><span>noodle video</span></p></a>
+        <p class="datum">1.4.2022.</p>
+        <a href="posts/pencil_case.html"><p><span>pencil case</span></p></a>
+        <p class="datum">1.4.2022.</p>
+        <a href="posts/noFap.html"><p><span>noFap </span></p></a>
+        <p class="datum">30.3.2022.</p>
+        <a href="posts/pursuit_of_STEM.html"><p><span>pursuit of STEM </span></p></a>
+        <p class="datum">29.3.2022.</p>
+        <p><span onclick="lozinka()">darker than Gotham</span></p>
+        <p class="datum">15.10.2022.</p>
+        <a href="posts/fake_scenarios.html"><p><span>fake scenarios</span></p></a>
+  
+        <a href="duck_photo.html"> <img src="images/duck.png" alt="duck_photo"></a>
+        <button onclick="easterEgg()" type="button" id="tipka">CLICK</button>
+        </div>
+        <div class="footer">
+        <a href="spams_and_randoms.html"><h1 id="randoms">spams and radnoms</h1></a>
+        </div>
+           
+        <script>
+            darkerThanGotham = "posts/darker_than_Gotham.html";
+            function lozinka(){
+            let pass = prompt("enter password");
+            if(pass == "duck" ){ 
+           location.href = darkerThanGotham; 
+        } else {
+            alert("hehe wrong, not today!")
+        }
+            }
+            var counter = 0;
+            function easterEgg(){
+                counter += 1;
+                document.getElementById("tipka").innerHTML = "CLICK (" + counter + ")";
+                if (counter == 10){
+                    alert("hey, tu bu dosel jen easter egg uskoro");
+                }
+            }
+           
+        </script>
+    </body>
+ 
+</html>
